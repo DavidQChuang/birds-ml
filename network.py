@@ -49,7 +49,7 @@ class BirdDataset(Dataset):
         return [ self.birds_in[idx], self.birds_out[idx] ]
     
 
-EPOCHS = 100
+EPOCHS = 10
 VALID_SPLIT = 0.3
 BATCH_SIZE = 5
 
@@ -144,4 +144,4 @@ for i in range(EPOCHS):
             }, False)
     print()
             
-torch.save(model.state_dict(), get_ckpt_path(model_path_idx))
+torch.save(model.state_dict(), utils.get_ckpt_path(model_path_idx))

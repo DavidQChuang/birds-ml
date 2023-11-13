@@ -3,7 +3,7 @@ import os
 from efficientnet_pytorch.model import EfficientNet
 from efficientnet_pytorch.utils import efficientnet, efficientnet_params
 import torch
-import tqdm
+from tqdm import tqdm
 
 def get_ckpt_path(i):
     return "./model" + str(i) + ".ckpt"
